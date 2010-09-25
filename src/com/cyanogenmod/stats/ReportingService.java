@@ -67,5 +67,7 @@ public class ReportingService extends Service {
         } catch (Exception e) {
             Log.e("CMStats", "Got Exception", e);
         }
+        
+        stopSelf();
     }
 }
