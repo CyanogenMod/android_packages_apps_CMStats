@@ -20,6 +20,10 @@ public class Utilities {
         return SystemProperties.get("ro.product.device");
     }
     
+    public static String getModVersion() {
+        return SystemProperties.get("ro.modversion");
+    }
+    
     public static String digest(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
