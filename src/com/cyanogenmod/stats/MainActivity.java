@@ -16,12 +16,14 @@ public class MainActivity extends Activity {
     private static final String PREF_NAME = "CMStats";
 
     private CheckBox mCheckbox;
+    private Button mPreviewButton;
     private Button mSaveButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        setTitle(R.string.main_title);
 
         mCheckbox = (CheckBox) findViewById(R.id.main_optin);
         mCheckbox.setOnCheckedChangeListener(new OnCheckedChangeListener(){
@@ -35,6 +37,16 @@ public class MainActivity extends Activity {
                 editor.commit();
                 startReportingService();
             }
+        });
+
+        mPreviewButton = (Button) findViewById(R.id.main_btn_preview);
+        mPreviewButton.setOnClickListener(new OnClickListener(){
+
+            public void onClick(View arg0) {
+                Intent i = new Intent(MainActivity.this, PreviewActivity.class);
+                startActivity(i);
+            }
+
         });
 
         mSaveButton = (Button) findViewById(R.id.main_btn_save);

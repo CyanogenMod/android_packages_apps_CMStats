@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">CMStats</string>
-    <string name="main_title">Anonymous Usage Data</string>
-    <string name="main_desc">Opting in to anonymous usage data submission allows the developers of CyanogenMod to track unique installations across devices.  Information submitted includes a unique identifier, which does not compromise your privacy, device type and version information.  Data is submitted on each device boot, for an example of data that is sent, please click Preview below.</string>
-    <string name="main_optin">Enable Reporting</string>
-    <string name="main_btn_preview">Preview Data</string>
-    <string name="main_btn_save">Save Preference</string>
+	<string name="app_name">CMStats</string>
+
+	<!-- Main -->
+	<string name="main_title">Anonymous Usage Data</string>
+	<string name="main_desc">Opt-ing in to anonymous usage data submission
+		allows
+		the developers of CyanogenMod to track unique installations
+		across
+		devices. Information submitted includes a unique identifier,
+		which
+		does not compromise your privacy, device type and version
+		information.
+		Data is submitted on each device boot, for an example of
+		data that is
+		sent, please click Preview below.</string>
+	<string name="main_optin">Enable Reporting</string>
+	<string name="main_btn_preview">Preview Data</string>
+	<string name="main_btn_save">Save Preference</string>
+
+	<!-- Preview -->
+	<string name="preview_title">Data Submission Preview</string>
+	<string name="preview_id_lbl">Unique ID</string>
+	<string name="preview_device_lbl">Device</string>
+	<string name="preview_version_lbl">Version</string>
+	<string name="preview_done_btn">Done</string>
 </resources>

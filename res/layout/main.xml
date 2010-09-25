@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
-
-<TextView android:text="@string/main_title" android:id="@+id/main_title" android:layout_height="wrap_content" android:padding="5dip" android:textColor="#FFFFFF" android:layout_width="fill_parent" android:gravity="center" android:textStyle="bold" android:textSize="20dip"></TextView>
-<TextView android:text="@string/main_desc" android:id="@+id/main_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="15dip" android:textColor="#FFFFFF"></TextView>
-<CheckBox android:text="@string/main_optin" android:id="@+id/main_optin" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_margin="5dip"></CheckBox>
-<LinearLayout android:id="@+id/LinearLayout01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center"><Button android:id="@+id/main_btn_preview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_btn_preview"></Button>
-<Button android:id="@+id/main_btn_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_btn_save"></Button>
-</LinearLayout>
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_weight="1" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView android:text="@string/main_desc" android:id="@+id/main_desc"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:padding="15dip" android:textColor="#FFFFFF"></TextView>
+		<CheckBox android:text="@string/main_optin" android:id="@+id/main_optin"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:layout_margin="5dip"></CheckBox>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:padding="5dip" android:background="@android:drawable/bottom_bar">
+		<Button android:id="@+id/main_btn_preview"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/main_btn_preview"></Button>
+		<Button android:id="@+id/main_btn_save" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/main_btn_save"></Button>
+	</LinearLayout>
 </LinearLayout>
