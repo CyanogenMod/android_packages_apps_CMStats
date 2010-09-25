@@ -14,6 +14,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.IBinder;
+import android.os.SystemProperties;
 import android.util.Log;
 
 public class ReportingService extends Service {
@@ -41,9 +42,24 @@ public class ReportingService extends Service {
     }
     
     private boolean canReport() {
+        boolean vanilla = false;
+        boolean optin = false;
+        
+        // Determine developer.
+        String developerid = SystemProperties.get("ro.rommanager.developeri", null);
+        if (developerid == "cyanogenmod") {
+            vanilla = true;
+        }
+        
+        // Determine opt-in status.
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
-        boolean optin = settings.getBoolean("optin", false);
-        return optin;
+        optin = settings.getBoolean("optin", false);
+        
+        if (vanilla && optin) {
+            return true;
+        } else {
+            return false;
+        }
     }
     
     private void report() {
