@@ -1,7 +1,9 @@
 package com.cyanogenmod.stats;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -62,6 +64,9 @@ public class MainActivity extends Activity {
         boolean optin = settings.getBoolean("optin", false);
 
         mCheckbox.setChecked(optin);
+        
+        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.cancel(1);
     }
 
     private void startReportingService(){

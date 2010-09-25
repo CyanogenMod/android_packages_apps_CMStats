@@ -25,4 +25,9 @@
 	<string name="preview_device_lbl">Device</string>
 	<string name="preview_version_lbl">Version</string>
 	<string name="preview_done_btn">Done</string>
+	
+	<!-- Notification -->
+	<string name="notification_ticker">Anonymous Data Opt-In Request</string>
+	<string name="notification_title">CyanogenMod Statistics</string>
+	<string name="notification_desc">Enable anonymous data reporting.</string>
 </resources>
