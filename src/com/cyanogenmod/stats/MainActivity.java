@@ -55,6 +55,10 @@ public class MainActivity extends Activity {
         mSaveButton.setOnClickListener(new OnClickListener(){
 
             public void onClick(View v) {
+                SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putBoolean("firstboot", false);
+                editor.commit();
                 finish();
             }
 
