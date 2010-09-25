@@ -25,7 +25,7 @@ public class ReportingService extends Service {
         // TODO Auto-generated method stub
         return null;
     }
-    
+
     @Override
     public void onCreate() {
         if (isFirstBoot()) {
@@ -34,43 +34,45 @@ public class ReportingService extends Service {
             report();
         }
     }
-    
+
     private boolean isFirstBoot() {
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
         boolean firstboot = settings.getBoolean("firstboot", true);
         return firstboot;
     }
-    
+
     private boolean canReport() {
         boolean vanilla = false;
         boolean optin = false;
-        
+
         // Determine developer.
-        String developerid = SystemProperties.get("ro.rommanager.developeri", null);
-        if (developerid == "cyanogenmod") {
+        String developerid = SystemProperties.get("ro.rommanager.developerid", null);
+        if (developerid == "cyanogenmod" || developerid == "cyanogenmodnightly") {
             vanilla = true;
         }
-        
+
+        vanilla = true;
+
         // Determine opt-in status.
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
         optin = settings.getBoolean("optin", false);
-        
+
         if (vanilla && optin) {
             return true;
         } else {
             return false;
         }
     }
-    
+
     private void report() {
         String deviceId = Utilities.getUniqueID(getApplicationContext());
         String deviceName = Utilities.getDevice();
         String deviceVersion = Utilities.getModVersion();
-        
+
         Log.d("CMStats", "Device ID: " + deviceId);
         Log.d("CMStats", "Device Name: " + deviceName);
         Log.d("CMStats", "Device Version: " + deviceVersion);
-        
+
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("http://cyanogenmodstats.appspot.com/submit");
         try {
@@ -83,7 +85,7 @@ public class ReportingService extends Service {
         } catch (Exception e) {
             Log.e("CMStats", "Got Exception", e);
         }
-        
+
         stopSelf();
     }
 }
