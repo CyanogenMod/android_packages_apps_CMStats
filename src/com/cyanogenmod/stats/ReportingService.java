@@ -31,7 +31,13 @@ public class ReportingService extends Service {
         if (isFirstBoot()) {
             Log.d("CMStats", "First Boot, prompting user.");
         } else if (canReport() == true) {
-            report();
+            Thread thread = new Thread() {
+                @Override
+                public void run() {
+                    report();
+                }
+            };
+            thread.start();
         }
     }
 
