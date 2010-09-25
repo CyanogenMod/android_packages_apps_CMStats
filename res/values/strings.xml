@@ -2,4 +2,9 @@
 <resources>
     <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">CMStats</string>
+    <string name="main_title">Anonymous Usage Data</string>
+    <string name="main_desc">Opting in to anonymous usage data submission allows the developers of CyanogenMod to track unique installations across devices.  Information submitted includes a unique identifier, which does not compromise your privacy, device type and version information.  Data is submitted on each device boot, for an example of data that is sent, please click Preview below.</string>
+    <string name="main_optin">Enable Reporting</string>
+    <string name="main_btn_preview">Preview Data</string>
+    <string name="main_btn_save">Save Preference</string>
 </resources>
