@@ -18,9 +18,11 @@
 			</intent-filter>
 		</receiver>
 
-	</application>
+	<service android:label="ReportingService" android:enabled="true" android:name=".ReportingService"></service>
+</application>
 
 	<uses-sdk android:minSdkVersion="8" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest> 

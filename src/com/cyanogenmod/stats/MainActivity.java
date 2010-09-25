@@ -1,6 +1,8 @@
 package com.cyanogenmod.stats;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +31,9 @@ public class MainActivity extends Activity {
                 SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putBoolean("optin", isChecked);
+                editor.putBoolean("firstboot", false);
                 editor.commit();
+                startReportingService();
             }
         });
         
@@ -46,5 +50,10 @@ public class MainActivity extends Activity {
         boolean optin = settings.getBoolean("optin", false);
         
         mCheckbox.setChecked(optin);
+    }
+    
+    private void startReportingService(){
+        ComponentName cmp = new ComponentName(getPackageName(), ReportingService.class.getName());
+        startService(new Intent().setComponent(cmp));
     }
 }

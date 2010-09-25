@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 
 import android.content.Context;
+import android.os.SystemProperties;
 import android.telephony.TelephonyManager;
 
 public class Utilities {
@@ -13,6 +14,10 @@ public class Utilities {
         String device_id = digest(tm.getDeviceId());
         
         return device_id;
+    }
+    
+    public static String getDevice() {
+        return SystemProperties.get("ro.product.device");
     }
     
     public static String digest(String input) {
