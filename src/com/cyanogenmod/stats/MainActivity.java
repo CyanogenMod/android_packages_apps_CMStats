@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
         });
 
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
-        boolean optin = settings.getBoolean("optin", false);
+        boolean optin = settings.getBoolean("optin", true);
 
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("firstboot", false);
