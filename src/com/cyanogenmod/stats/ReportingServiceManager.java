@@ -10,11 +10,9 @@ public class ReportingServiceManager extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context ctx, Intent intent) {
-        Log.d("CMStats", "Got ACTION_BOOT_COMPLETED.");
         if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
             ComponentName cmp = new ComponentName(ctx.getPackageName(), ReportingService.class.getName());
             ctx.startService(new Intent().setComponent(cmp));
-            Log.d("CMStats", "Service starting from ReportingServiceManager");
         }
     }
 

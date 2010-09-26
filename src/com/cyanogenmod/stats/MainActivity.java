@@ -53,22 +53,20 @@ public class MainActivity extends Activity {
 
         mSaveButton = (Button) findViewById(R.id.main_btn_save);
         mSaveButton.setOnClickListener(new OnClickListener(){
-
             public void onClick(View v) {
-                SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putBoolean("firstboot", false);
-                editor.commit();
                 finish();
             }
-
         });
 
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
         boolean optin = settings.getBoolean("optin", false);
 
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("firstboot", false);
+        editor.commit();
+
         mCheckbox.setChecked(optin);
-        
+
         NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         nm.cancel(1);
     }
