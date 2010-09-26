@@ -23,6 +23,7 @@ import android.util.Log;
 
 public class ReportingService extends Service {
     private static final String PREF_NAME = "CMStats";
+    private static final String TAG = "CMStats";
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -77,22 +78,28 @@ public class ReportingService extends Service {
         String deviceId = Utilities.getUniqueID(getApplicationContext());
         String deviceName = Utilities.getDevice();
         String deviceVersion = Utilities.getModVersion();
+        String deviceCountry = Utilities.getCountryCode(getApplicationContext());
+        String deviceCarrier = Utilities.getCarrier(getApplicationContext());
 
-        Log.d("CMStats", "Device ID: " + deviceId);
-        Log.d("CMStats", "Device Name: " + deviceName);
-        Log.d("CMStats", "Device Version: " + deviceVersion);
+        Log.d(TAG, "Device ID: " + deviceId);
+        Log.d(TAG, "Device Name: " + deviceName);
+        Log.d(TAG, "Device Version: " + deviceVersion);
+        Log.d(TAG, "Country: " + deviceCountry);
+        Log.d(TAG, "Carrier: " + deviceCarrier);
 
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("http://cyanogenmodstats.appspot.com/submit");
         try {
-            List<NameValuePair> kv = new ArrayList<NameValuePair>(3);
+            List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
             kv.add(new BasicNameValuePair("id", deviceId));
             kv.add(new BasicNameValuePair("type", deviceName));
             kv.add(new BasicNameValuePair("version", deviceVersion));
+            kv.add(new BasicNameValuePair("country", deviceCountry));
+            kv.add(new BasicNameValuePair("carrier", deviceCarrier));
             httppost.setEntity(new UrlEncodedFormEntity(kv));
             httpclient.execute(httppost);
         } catch (Exception e) {
-            Log.e("CMStats", "Got Exception", e);
+            Log.e(TAG, "Got Exception", e);
         }
 
         stopSelf();

@@ -6,6 +6,7 @@ import java.security.MessageDigest;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 public class Utilities {
     public static String getUniqueID(Context ctx){
@@ -14,6 +15,24 @@ public class Utilities {
         String device_id = digest(tm.getDeviceId());
 
         return device_id;
+    }
+    
+    public static String getCarrier(Context ctx) {
+        TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+        String carrier = tm.getNetworkOperatorName();
+        if (carrier.equals("")) {
+            carrier = "Unknown";
+        }
+        return carrier;
+    }
+    
+    public static String getCountryCode(Context ctx) {
+        TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+        String countryCode = tm.getNetworkCountryIso();
+        if (countryCode.equals("")) {
+            countryCode = "Unknown";
+        }
+        return countryCode;
     }
 
     public static String getDevice() {

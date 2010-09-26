@@ -25,6 +25,8 @@
 	<string name="preview_device_lbl">Device</string>
 	<string name="preview_version_lbl">Version</string>
 	<string name="preview_done_btn">Done</string>
+	<string name="preview_country_lbl">Country</string>
+	<string name="preview_carrier_lbl">Carrier</string>
 	
 	<!-- Notification -->
 	<string name="notification_ticker">Anonymous Data Opt-In Request</string>
