@@ -18,6 +18,7 @@
 	<string name="main_optin">Enable Reporting</string>
 	<string name="main_btn_preview">Preview Data</string>
 	<string name="main_btn_save">Save Preference</string>
+	<string name="showStats">View Stats</string>
 
 	<!-- Preview -->
 	<string name="preview_title">Data Submission Preview</string>

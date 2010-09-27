@@ -17,8 +17,12 @@
 		android:padding="5dip" android:background="@android:drawable/bottom_bar">
 		<Button android:id="@+id/main_btn_preview"
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
-			android:text="@string/main_btn_preview"></Button>
+			android:text="@string/main_btn_preview" android:layout_weight="1"></Button>
 		<Button android:id="@+id/main_btn_save" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:text="@string/main_btn_save"></Button>
+			android:layout_height="wrap_content" android:text="@string/main_btn_save"
+			android:layout_weight="1"></Button>
+		<Button android:id="@+id/showStats" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/showStats"
+			android:layout_weight="1"></Button>
 	</LinearLayout>
 </LinearLayout>

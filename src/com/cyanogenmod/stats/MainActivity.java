@@ -6,6 +6,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,6 +21,7 @@ public class MainActivity extends Activity {
     private CheckBox mCheckbox;
     private Button mPreviewButton;
     private Button mSaveButton;
+    private Button mStatsButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,16 @@ public class MainActivity extends Activity {
             }
         });
 
+        mStatsButton = (Button) findViewById(R.id.showStats);
+        mStatsButton.setOnClickListener(new OnClickListener(){
+
+            public void onClick(View arg0) {
+            	Uri uri = Uri.parse("http://cyanogenmod.com/stats");
+				startActivity(new Intent(Intent.ACTION_VIEW, uri));
+            }
+
+        });
+        
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
         boolean optin = settings.getBoolean("optin", false);
 
