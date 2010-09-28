@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     private CheckBox mCheckbox;
     private Button mPreviewButton;
     private Button mSaveButton;
-	private Button mStatsButton;
+    private Button mStatsButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,10 +59,10 @@ public class MainActivity extends Activity {
             }
         });
 
-		mStatsButton = (Button) findViewById(R.id.main_show_stats);
+        mStatsButton = (Button) findViewById(R.id.main_show_stats);
         mStatsButton.setOnClickListener(new OnClickListener(){
             public void onClick(View arg0) {
-			    Uri uri = Uri.parse("http://cyanogenmod.com/stats");
+                Uri uri = Uri.parse("http://cyanogenmod.com/stats");
                 startActivity(new Intent(Intent.ACTION_VIEW, uri));
             }
         });
