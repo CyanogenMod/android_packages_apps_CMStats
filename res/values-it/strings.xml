@@ -17,6 +17,7 @@
         <string name="main_optin">Attiva Reporting</string>
         <string name="main_btn_preview">Anteprima Dati</string>
         <string name="main_btn_save">Salva Preferenze</string>
+        <string name="main_show_stats">Visualizza Statistiche</string>
 
         <!-- Preview -->
         <string name="preview_title">Anteprima Invio Dati</string>
