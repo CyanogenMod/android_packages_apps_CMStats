@@ -14,6 +14,7 @@
   <string name="main_optin">Berichte einschalten</string>
   <string name="main_btn_preview">Vorschau</string>
   <string name="main_btn_save">Speichern</string>
+  <string name="main_show_stats">Statistiken ansehen</string>
 
   <!-- Preview -->
   <string name="preview_title">Vorschau Datenübertragung</string>
