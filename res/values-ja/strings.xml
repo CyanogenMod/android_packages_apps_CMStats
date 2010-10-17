@@ -14,6 +14,7 @@
     <string name="main_optin">報告を有効にする</string>
     <string name="main_btn_preview">データのプレビュー</string>
     <string name="main_btn_save">設定の保存</string>
+    <string name="main_show_stats">ステータスを表示</string>
 
     <!-- Preview -->
     <string name="preview_title">送信データのプレビュー</string>
