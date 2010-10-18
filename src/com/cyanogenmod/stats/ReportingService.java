@@ -46,6 +46,7 @@ public class ReportingService extends Service {
             thread.start();
         } else {
             Log.d(TAG, "User has not opted in -- skipping reporting.");
+	    stopSelf();
         }
     }
 
