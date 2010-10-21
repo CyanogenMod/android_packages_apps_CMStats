@@ -20,10 +20,19 @@ public class Utilities {
     public static String getCarrier(Context ctx) {
         TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
         String carrier = tm.getNetworkOperatorName();
-        if (carrier.equals("")) {
+        if ("".equals(carrier)) {
             carrier = "Unknown";
         }
         return carrier;
+    }
+
+    public static String getCarrierId(Context ctx) {
+        TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+        String carrierId = tm.getNetworkOperator();
+        if ("".equals(carrierId)) {
+            carrierId = "0";
+        }
+        return carrierId;
     }
     
     public static String getCountryCode(Context ctx) {
