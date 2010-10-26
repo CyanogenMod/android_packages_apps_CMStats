@@ -57,20 +57,14 @@ public class ReportingService extends Service {
     }
 
     private boolean canReport() {
-        boolean vanilla = false;
-        boolean optin = false;
-
         // Determine developer.
         String developerid = SystemProperties.get("ro.rommanager.developerid", null);
-        if (developerid == "cyanogenmod" || developerid == "cyanogenmodnightly") {
-            vanilla = true;
-        }
-
-        vanilla = true;
+        boolean vanilla =
+            ("cyanogenmod".equals(developerid) || "cyanogenmodnightly".equals(developerid));
 
         // Determine opt-in status.
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
-        optin = settings.getBoolean("optin", false);
+        boolean optin = settings.getBoolean("optin", false);
 
         if (vanilla && optin) {
             return true;
@@ -85,12 +79,14 @@ public class ReportingService extends Service {
         String deviceVersion = Utilities.getModVersion();
         String deviceCountry = Utilities.getCountryCode(getApplicationContext());
         String deviceCarrier = Utilities.getCarrier(getApplicationContext());
+        String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
 
         Log.d(TAG, "Device ID: " + deviceId);
         Log.d(TAG, "Device Name: " + deviceName);
         Log.d(TAG, "Device Version: " + deviceVersion);
         Log.d(TAG, "Country: " + deviceCountry);
         Log.d(TAG, "Carrier: " + deviceCarrier);
+        Log.d(TAG, "Carrier ID: " + deviceCarrierId);
 
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("http://cyanogenmodstats.appspot.com/submit");
@@ -101,6 +97,7 @@ public class ReportingService extends Service {
             kv.add(new BasicNameValuePair("version", deviceVersion));
             kv.add(new BasicNameValuePair("country", deviceCountry));
             kv.add(new BasicNameValuePair("carrier", deviceCarrier));
+            kv.add(new BasicNameValuePair("carrierid", deviceCarrierId));
             httppost.setEntity(new UrlEncodedFormEntity(kv));
             httpclient.execute(httppost);
         } catch (Exception e) {
