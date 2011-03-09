@@ -4,18 +4,18 @@
 
     <!-- Main -->
     <string name="main_title">Uso de Informação Anônima</string>
-    <string name="main_desc">Ao optar por permitir o envio de informação
+    <string name="main_desc">Ao optar por permitir o envio de informação,
     permite
     aos desenvolvedores da CyanogenMod seguir instalações únicas
     por
     vários dispositivos. A informação submetida contém uma
-    identificação (ID) única, a qual não compromete
-    a sua privacidade, tipo de dispositivo e
+    identificação (ID) única (não compromete
+    a sua privacidade), tipo de dispositivo e
     informação de versão.
     A informação é submetida a cada inicialização do dispositivo. Para um exemplo
     da informação que é
     enviada, clique em "Pré-visualizar Informação".</string>
-    <string name="main_optin">Ativar Envio Relatório</string>
+    <string name="main_optin">Ativar Envio de Relatório</string>
     <string name="main_btn_preview">Pré-visualizar Informação</string>
     <string name="main_btn_save">Salvar Preferência</string>
     <string name="main_show_stats">Ver Estatísticas</string>
