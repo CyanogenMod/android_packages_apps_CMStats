@@ -6,7 +6,6 @@ import java.security.MessageDigest;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.telephony.TelephonyManager;
-import android.util.Log;
 
 public class Utilities {
     public static String getUniqueID(Context ctx){
