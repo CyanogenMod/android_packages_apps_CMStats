@@ -18,7 +18,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.IBinder;
-import android.os.SystemProperties;
 import android.util.Log;
 
 public class ReportingService extends Service {
@@ -55,18 +54,26 @@ public class ReportingService extends Service {
         boolean firstboot = settings.getBoolean("firstboot", true);
         return firstboot;
     }
+    
+    private void setCheckedIn(boolean checkedin) {
+        SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        
+        editor.putBoolean("checkedin", checkedin);
+        editor.commit();
+        Log.d(TAG, "SERVICE: setting checkedin=" + checkedin);
+    }
 
     private boolean canReport() {
-        // Determine developer.
-        String developerid = SystemProperties.get("ro.rommanager.developerid", null);
-        boolean vanilla =
-            ("cyanogenmod".equals(developerid) || "cyanogenmodnightly".equals(developerid));
-
-        // Determine opt-in status.
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
+        
+        // Determine whether or not we have already checked in.
+        boolean checkedin = settings.getBoolean("checkedin", false);
+        
+        // Determine opt-in status.
         boolean optin = settings.getBoolean("optin", false);
 
-        if (vanilla && optin) {
+        if (optin && !checkedin) {
             return true;
         } else {
             return false;
@@ -81,12 +88,12 @@ public class ReportingService extends Service {
         String deviceCarrier = Utilities.getCarrier(getApplicationContext());
         String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
 
-        Log.d(TAG, "Device ID: " + deviceId);
-        Log.d(TAG, "Device Name: " + deviceName);
-        Log.d(TAG, "Device Version: " + deviceVersion);
-        Log.d(TAG, "Country: " + deviceCountry);
-        Log.d(TAG, "Carrier: " + deviceCarrier);
-        Log.d(TAG, "Carrier ID: " + deviceCarrierId);
+        Log.d(TAG, "SERVICE: Device ID=" + deviceId);
+        Log.d(TAG, "SERVICE: Device Name=" + deviceName);
+        Log.d(TAG, "SERVICE: Device Version=" + deviceVersion);
+        Log.d(TAG, "SERVICE: Country=" + deviceCountry);
+        Log.d(TAG, "SERVICE: Carrier=" + deviceCarrier);
+        Log.d(TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
 
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("http://stats.cyanogenmod.com/submit");
@@ -100,7 +107,9 @@ public class ReportingService extends Service {
             kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
             httppost.setEntity(new UrlEncodedFormEntity(kv));
             httpclient.execute(httppost);
+            setCheckedIn(true);
         } catch (Exception e) {
+            setCheckedIn(false);
             Log.e(TAG, "Got Exception", e);
         }
 
