@@ -89,15 +89,15 @@ public class ReportingService extends Service {
         Log.d(TAG, "Carrier ID: " + deviceCarrierId);
 
         HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost("http://cyanogenmodstats.appspot.com/submit");
+        HttpPost httppost = new HttpPost("http://stats.cyanogenmod.com/submit");
         try {
             List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
-            kv.add(new BasicNameValuePair("id", deviceId));
-            kv.add(new BasicNameValuePair("type", deviceName));
-            kv.add(new BasicNameValuePair("version", deviceVersion));
-            kv.add(new BasicNameValuePair("country", deviceCountry));
-            kv.add(new BasicNameValuePair("carrier", deviceCarrier));
-            kv.add(new BasicNameValuePair("carrierid", deviceCarrierId));
+            kv.add(new BasicNameValuePair("device_hash", deviceId));
+            kv.add(new BasicNameValuePair("device_name", deviceName));
+            kv.add(new BasicNameValuePair("device_version", deviceVersion));
+            kv.add(new BasicNameValuePair("device_country", deviceCountry));
+            kv.add(new BasicNameValuePair("device_carrier", deviceCarrier));
+            kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
             httppost.setEntity(new UrlEncodedFormEntity(kv));
             httpclient.execute(httppost);
         } catch (Exception e) {
