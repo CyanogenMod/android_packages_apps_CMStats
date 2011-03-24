@@ -4,7 +4,7 @@
 
   <!-- Main -->
   <string name="main_title">Anonym brukerdata</string>
-  <string name="main_desc">Ved å sende inn anonym brukerdata kan CyanogenMod sine utviklere spore installasjoner på tvers av enheter. Informasjon som blir sendt inn inneholder en unik identifikator, enhetstype og versjoninformasjon. Ingen av disse dataene kompromitterer personlige opplysninger. Data lastes opp ved hver oppstart av telefonen. Trykk på Forhåndsvisning for å se eksempel på data som blir sendt..</string>
+  <string name="main_desc">Ved å sende inn anonym brukerdata kan CyanogenMod sine utviklere spore installasjoner på tvers av enheter. Informasjon som blir sendt inn inneholder en unik identifikator, enhetstype og versjoninformasjon. Ingen av disse dataene kompromitterer personlige opplysninger. Data lastes opp ved hver oppstart av telefonen. Trykk på Forhåndsvisning for å se et eksempel på data som blir sendt..</string>
   <string name="main_optin">Aktiver rapportering</string>
   <string name="main_btn_preview">Forhåndsvisning</string>
   <string name="main_btn_save">Lagre</string>
