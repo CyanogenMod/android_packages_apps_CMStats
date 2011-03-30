@@ -12,6 +12,9 @@ public class Utilities {
         TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
 
         String device_id = digest(tm.getDeviceId());
+        if (device_id == null) {
+            device_id = digest(SystemProperties.get("ro.product.device") + SystemProperties.get("ro.serialnumber"));
+        }
 
         return device_id;
     }
