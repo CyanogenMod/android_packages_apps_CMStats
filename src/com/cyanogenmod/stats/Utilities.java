@@ -1,6 +1,7 @@
 package com.cyanogenmod.stats;
 
 import java.math.BigInteger;
+import java.net.NetworkInterface;
 import java.security.MessageDigest;
 
 import android.content.Context;
@@ -12,6 +13,15 @@ public class Utilities {
         TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
 
         String device_id = digest(tm.getDeviceId());
+        if (device_id == null) {
+            String wifiInterface = SystemProperties.get("wifi.interface");
+            try {
+                String wifiMac = new String (NetworkInterface.getByName(wifiInterface).getHardwareAddress());
+                device_id = digest(wifiMac);
+            } catch (Exception e) {
+                device_id = null;
+            }
+        }
 
         return device_id;
     }
