@@ -70,8 +70,8 @@ public class ReportingService extends Service {
         // Determine whether or not we have already checked in.
         boolean checkedin = settings.getBoolean("checkedin", false);
         
-        // Determine opt-in status.
-        boolean optin = settings.getBoolean("optin", false);
+        // Determine opt-in status (opt-in by default)
+        boolean optin = settings.getBoolean("optin", true);
 
         if (optin && !checkedin) {
             return true;

@@ -30,7 +30,8 @@
     <string name="preview_carrier_lbl">Carrier</string>
 
     <!-- Notification -->
-    <string name="notification_ticker">Anonymous Data Opt-In Request</string>
+    <string name="notification_ticker">Statistics Opted-In</string>
     <string name="notification_title">CyanogenMod Statistics</string>
-    <string name="notification_desc">Enable anonymous data reporting.</string>
+    <string name="notification_desc">Enable or Disable Anonymous Statistics</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 </resources>

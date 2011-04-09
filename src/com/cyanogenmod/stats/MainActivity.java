@@ -8,11 +8,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
 public class MainActivity extends Activity {
@@ -22,12 +25,17 @@ public class MainActivity extends Activity {
     private Button mPreviewButton;
     private Button mSaveButton;
     private Button mStatsButton;
+    private TextView mLink;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setTitle(R.string.main_title);
+        
+        mLink = (TextView) findViewById(R.id.main_link);
+        mLink.setText(Html.fromHtml(getResources().getString(R.string.main_link)));
+        mLink.setMovementMethod(LinkMovementMethod.getInstance());
 
         mCheckbox = (CheckBox) findViewById(R.id.main_optin);
         mCheckbox.setOnCheckedChangeListener(new OnCheckedChangeListener(){
@@ -69,7 +77,7 @@ public class MainActivity extends Activity {
         });
 
         SharedPreferences settings = getSharedPreferences(PREF_NAME, 0);
-        boolean optin = settings.getBoolean("optin", false);
+        boolean optin = settings.getBoolean("optin", true);
 
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("firstboot", false);
