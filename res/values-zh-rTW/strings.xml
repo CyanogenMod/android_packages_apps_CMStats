@@ -21,7 +21,8 @@
     <string name="preview_carrier_lbl">電信業者</string>
 
     <!-- Notification -->
-    <string name="notification_ticker">匿名資料參與請求</string>
+    <string name="notification_ticker">志願性參與統計</string>
     <string name="notification_title">CyanogenMod 統計</string>
-    <string name="notification_desc">啟用匿名資料匯報</string>
+    <string name="notification_desc">啟用或停用匿名統計</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;了解更多&lt;/a&gt;</string>
 </resources>
