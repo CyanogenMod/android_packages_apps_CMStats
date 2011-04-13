@@ -29,7 +29,8 @@
         <string name="preview_carrier_lbl">Operatore</string>
 
         <!-- Notification -->
-        <string name="notification_ticker">Richiesta Invio Dati Anonimi</string>
+        <string name="notification_ticker">Statistiche Inviate</string>
         <string name="notification_title">Statistiche CyanogenMod</string>
-        <string name="notification_desc">Attiva reporting di dati anonimi.</string>
+        <string name="notification_desc">Attiva o disattiva Statistiche Anonime</string>
+        <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Per saperne di più&lt;/a&gt;</string>
 </resources>
