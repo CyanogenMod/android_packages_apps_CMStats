@@ -20,7 +20,8 @@
     <string name="preview_done_btn">Готово</string>
     <string name="preview_country_lbl">Країна</string>
     <string name="preview_carrier_lbl">Оператор</string>
-    <string name="notification_ticker">Запит щодо надання анонімних звітів</string>
+    <string name="notification_ticker">Увімкнено надання анонімних звітів</string>
     <string name="notification_title">Статистика CyanogenMod</string>
-    <string name="notification_desc">Увімкніть надання анонімних статистичних звітів.</string>
+    <string name="notification_desc">Увімкнення або вимкнення надання анонімних статистичних звітів</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Дізнатись більше&lt;/a&gt;</string>
 </resources>
