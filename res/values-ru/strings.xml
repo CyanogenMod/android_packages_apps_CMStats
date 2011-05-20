@@ -27,4 +27,5 @@
     <string name="notification_ticker">Запрос на отправку отчёта</string>
     <string name="notification_title">Статистика CyanogenMod</string>
     <string name="notification_desc">Включить отправку анонимных отчётов</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Подробнее&lt;/a&gt;</string>
 </resources>
