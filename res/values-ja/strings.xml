@@ -17,7 +17,6 @@
     <string name="main_show_stats">ステータスを表示</string>
 
     <!-- Preview -->
-    <string name="preview_title">送信データのプレビュー</string>
     <string name="preview_id_lbl">ユニークID</string>
     <string name="preview_device_lbl">デバイス</string>
     <string name="preview_version_lbl">バージョン</string>

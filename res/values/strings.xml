@@ -21,7 +21,6 @@
     <string name="main_show_stats">View Stats</string>
 
     <!-- Preview -->
-    <string name="preview_title">Data Submission Preview</string>
     <string name="preview_id_lbl">Unique ID</string>
     <string name="preview_device_lbl">Device</string>
     <string name="preview_version_lbl">Version</string>

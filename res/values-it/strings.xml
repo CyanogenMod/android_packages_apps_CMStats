@@ -20,7 +20,6 @@
         <string name="main_show_stats">Visualizza Statistiche</string>
 
         <!-- Preview -->
-        <string name="preview_title">Anteprima Invio Dati</string>
         <string name="preview_id_lbl">ID Unico</string>
         <string name="preview_device_lbl">Dispositivo</string>
         <string name="preview_version_lbl">Versione</string>

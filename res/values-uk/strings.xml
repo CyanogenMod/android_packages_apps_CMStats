@@ -13,7 +13,6 @@
     <string name="main_btn_preview">Звіт</string>
     <string name="main_btn_save">Зберегти налашт.</string>
     <string name="main_show_stats">Статистика</string>
-    <string name="preview_title">Зразок звіту</string>
     <string name="preview_id_lbl">Унікальний ідентифікатор</string>
     <string name="preview_device_lbl">Пристрій</string>
     <string name="preview_version_lbl">Версія</string>

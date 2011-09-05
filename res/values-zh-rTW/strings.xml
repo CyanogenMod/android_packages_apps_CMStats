@@ -12,7 +12,6 @@
     <string name="main_show_stats">檢視統計資料</string>
 
     <!-- Preview -->
-    <string name="preview_title">提交資料預覽</string>
     <string name="preview_id_lbl">識別項</string>
     <string name="preview_device_lbl">裝置</string>
     <string name="preview_version_lbl">版本</string>

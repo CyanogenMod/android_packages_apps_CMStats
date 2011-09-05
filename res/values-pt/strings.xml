@@ -21,7 +21,6 @@
     <string name="main_show_stats">Ver Estatísticas</string>
 
     <!-- Preview -->
-    <string name="preview_title">Pré-visualizar Informação</string>
     <string name="preview_id_lbl">ID Único</string>
     <string name="preview_device_lbl">Dispositivo</string>
     <string name="preview_version_lbl">Versão</string>

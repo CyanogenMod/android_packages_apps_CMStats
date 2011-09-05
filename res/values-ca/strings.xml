@@ -7,7 +7,6 @@
   <string name="main_btn_preview">Vista prèvia</string>
   <string name="main_btn_save">Desa les preferències</string>
   <string name="main_show_stats">Mostra les estadístiques</string>
-  <string name="preview_title">Vista prèvia de l\'enviament de dades</string>
   <string name="preview_id_lbl">ID únic</string>
   <string name="preview_device_lbl">Dispositiu</string>
   <string name="preview_version_lbl">Versió</string>

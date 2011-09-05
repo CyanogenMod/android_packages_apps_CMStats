@@ -21,7 +21,6 @@
     <string name="main_show_stats">Vis Statistik</string>
 
     <!-- Preview -->
-    <string name="preview_title">Forhåndsvisning af Data</string>
     <string name="preview_id_lbl">Unikt ID</string>
     <string name="preview_device_lbl">Enhed</string>
     <string name="preview_version_lbl">Version</string>

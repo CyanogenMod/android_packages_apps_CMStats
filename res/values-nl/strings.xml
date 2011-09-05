@@ -15,7 +15,6 @@
     <string name="main_show_stats">Statistieken</string>
 
     <!-- Preview -->
-    <string name="preview_title">Voorbeeld</string>
     <string name="preview_id_lbl">Unieke ID</string>
     <string name="preview_device_lbl">Toestel</string>
     <string name="preview_version_lbl">Versie</string>

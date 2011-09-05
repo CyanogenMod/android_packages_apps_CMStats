@@ -11,7 +11,6 @@
     <string name="main_show_stats">통계 보기</string>
 
     <!-- Preview -->
-    <string name="preview_title">데이터 미리보기</string>
     <string name="preview_id_lbl">고유 식별자</string>
     <string name="preview_device_lbl">장치</string>
     <string name="preview_version_lbl">버전</string>

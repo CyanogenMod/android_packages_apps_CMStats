@@ -17,7 +17,6 @@
     <string name="main_show_stats">Pokaż statystyki</string>
 
     <!-- Preview -->
-    <string name="preview_title">Podgląd przesyłanych danych</string>
     <string name="preview_id_lbl">Unikalny ID</string>
     <string name="preview_device_lbl">Urządzenie</string>
     <string name="preview_version_lbl">Wersja</string>

@@ -19,7 +19,6 @@
     <string name="main_show_stats">Visa Statistik</string>
 
     <!-- Preview -->
-    <string name="preview_title">Förhandsgranskning av datainlämning</string>
     <string name="preview_id_lbl">Unikt ID</string>
     <string name="preview_device_lbl">Enhet</string>
     <string name="preview_version_lbl">Version</string>

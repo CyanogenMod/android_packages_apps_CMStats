@@ -11,7 +11,6 @@
     <string name="main_show_stats">查看统计数据</string>
 
     <!-- Preview -->
-    <string name="preview_title">提交数据预览</string>
     <string name="preview_id_lbl">唯一识别字符串</string>
     <string name="preview_device_lbl">设备</string>
     <string name="preview_version_lbl">版本</string>

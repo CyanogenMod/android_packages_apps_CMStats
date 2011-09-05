@@ -11,7 +11,6 @@
   <string name="main_show_stats">Vis statistikk</string>
 
   <!-- Preview -->
-  <string name="preview_title">Forhåndsvisning av rapport</string>
   <string name="preview_id_lbl">Unik ID</string>
   <string name="preview_device_lbl">Modell</string>
   <string name="preview_version_lbl">Versjon</string>
