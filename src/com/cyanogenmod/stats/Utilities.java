@@ -54,7 +54,7 @@ public class Utilities {
     }
 
     public static String getDevice() {
-        return SystemProperties.get("ro.product.device");
+        return SystemProperties.get("ro.cm.device");
     }
 
     public static String getModVersion() {
