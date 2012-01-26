@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CMStats</string>
+
+    <!-- Main -->
+    <string name="main_title">Anonim Kullanım Verisi</string>
+    <string name="main_desc">İsteğe bağlı anonim verilerin etkinleştirilmesi,
+    hangi cihazın hangi sürümü kullandığı gibi bilgileri
+    CyanogenMod geliştiricilerinin izlemesine izin vererek gönderir.
+    Gönderilen bilgi sadece benzersiz kimliktir, gizliliğinizi
+    ortaya çıkaran bilgiler iletilmez.
+    Veri, cihaz her açıldığında gönderilir. Gönderilen verilerin
+    örneğine aşağıdaki Verileri Önizle düğmesine tıklayarak bakabilirsiniz.</string>
+    <string name="main_optin">Raporlamayı Etkinleştir</string>
+    <string name="main_btn_preview">Verileri Önizle</string>
+    <string name="main_btn_save">Tercihleri Kaydet</string>
+    <string name="main_show_stats">İstatistiklere Bak</string>
+
+    <!-- Preview -->
+    <string name="preview_id_lbl">Benzersiz Kimlik</string>
+    <string name="preview_device_lbl">Cihaz</string>
+    <string name="preview_version_lbl">Sürüm</string>
+    <string name="preview_done_btn">Tamam</string>
+    <string name="preview_country_lbl">Ülke</string>
+    <string name="preview_carrier_lbl">Şebeke</string>
+
+    <!-- Notification -->
+    <string name="notification_ticker">İsteğe Bağlı İstatistikler</string>
+    <string name="notification_title">CyanogenMod İstatistikleri</string>
+    <string name="notification_desc">Anonim istatistikleri aç veya kapat</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Daha Fazlasını Öğrenin&lt;/a&gt;</string>
+</resources>
