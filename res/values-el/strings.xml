@@ -32,5 +32,5 @@
     <string name="notification_ticker">Συμφωνήσατε με την αποστολή στατιστικών</string>
     <string name="notification_title">Στατιστικά CyanogenMod</string>
     <string name="notification_desc">Ενεργοποίηση ή Απενεργοποίηση Ανώνυμων Στατιστικών</string>
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 </resources>

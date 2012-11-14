@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
         mStatsButton = (Button) findViewById(R.id.main_show_stats);
         mStatsButton.setOnClickListener(new OnClickListener(){
             public void onClick(View arg0) {
-                Uri uri = Uri.parse("http://cyanogenmod.com/stats");
+                Uri uri = Uri.parse("http://stats.cyanogenmod.org");
                 startActivity(new Intent(Intent.ACTION_VIEW, uri));
             }
         });

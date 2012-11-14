@@ -34,6 +34,6 @@
   <string name="notification_title">Statistika CyanogenMod</string>
   <string name="notification_desc">Povolit nebo zakázat anonymní statistiku</string>
   <string name="main_link">&lt;a
-    href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Další
+    href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Další
     informace&lt;/a&gt;</string>
 </resources>

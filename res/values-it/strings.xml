@@ -31,5 +31,5 @@
         <string name="notification_ticker">Statistiche Inviate</string>
         <string name="notification_title">Statistiche CyanogenMod</string>
         <string name="notification_desc">Attiva o disattiva Statistiche Anonime</string>
-        <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Per saperne di più&lt;/a&gt;</string>
+        <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Per saperne di più&lt;/a&gt;</string>
 </resources>

@@ -28,5 +28,5 @@
     <string name="notification_ticker">İsteğe Bağlı İstatistikler</string>
     <string name="notification_title">CyanogenMod İstatistikleri</string>
     <string name="notification_desc">Anonim istatistikleri aç veya kapat</string>
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Daha Fazlasını Öğrenin&lt;/a&gt;</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Daha Fazlasını Öğrenin&lt;/a&gt;</string>
 </resources>

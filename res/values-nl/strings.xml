@@ -22,5 +22,5 @@
     <string name="notification_ticker">Statistieken verzonden</string>
     <string name="notification_title">CyanogenMod-statistieken</string>
     <string name="notification_desc">Anonieme statistieken in-/uitschakelen</string>
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Lees meer&lt;/a&gt;</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Lees meer&lt;/a&gt;</string>
 </resources>

@@ -23,5 +23,5 @@
     <string name="notification_ticker">志願性參與統計</string>
     <string name="notification_title">CyanogenMod 統計</string>
     <string name="notification_desc">啟用或停用匿名統計</string>
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;了解更多&lt;/a&gt;</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;了解更多&lt;/a&gt;</string>
 </resources>
