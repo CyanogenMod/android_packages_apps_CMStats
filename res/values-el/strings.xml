@@ -3,25 +3,19 @@
     <string name="app_name">CMStats</string>
 
     <!-- Main -->
-    <string name="main_title">Ανώνυμα Δεδομένα Χρήσης</string>
-    <string name="main_desc">Με το να συμφωνήσετε στην ανώνυμη υποβολή δεδομένων χρήσης
-        επιτρέπετε
-        στους προγραμματιστές του CyanogenMod να καταγράψουν μοναδικές εγκαταστάσεις
-        μεταξύ
-        συσκευών. Οι πληροφορίες που αποστέλλονται περιλαμβάνουν ένα μοναδικό ID,
-        το οποίο
-        δεν παραβιάζει την ιδιωτική σας ασφάλεια, τον τύπο της συσκευής και τις
-        πληροφορίες έκδοσης.
-        Τα δεδομένα αποστέλλονται σε κάθε εκκίνηση της συσκευής, για ένα παράδειγμα
-        των δεδομένων,
-        παρακαλώ πατήστε Προεπισκόπηση.</string>
-    <string name="main_optin">Ενεργοποίηση Αναφοράς</string>
-    <string name="main_btn_preview">Προεπισκόπηση Δεδομένων</string>
-    <string name="main_btn_save">Αποθήκευση Επιλογής</string>
-    <string name="main_show_stats">Προβολή Στατιστικών</string>
+    <string name="main_title">Στατιστικά CyanogenMod</string>
+    <string name="main_desc">Ενεργοποιώντας τα στατιστικά του CyanogenMod επιτρέπετε την αποστολή
+        μη προσωπικών δεδομένων στους προγραμματιστές του CyanogenMod για παρακολούθηση του αριθμού μοναδικών εγκαταστάσεων
+        σε όλες τις συσκευές. Οι πληροφορίες που αποστέλλονται συμπεριλαμβάνουν ένα μοναδικό αναγνωριστικό, το οποίο δεν θέτει
+        σε κίνδυνο την ασφάλεια σας ή τα προσωπικά δεδομένα. Τα δεδομένα αποστέλλονται σε κάθε εκκίνηση.\n\nΓια ένα παράδειγμα
+        των δεδομένων που αποστέλλονται, πατήστε στην Προεπισκόπηση δεδομένων.</string>
+    <string name="main_optin">Ενεργοποίηση αναφοράς</string>
+    <string name="main_btn_preview">Προεπισκόπηση δεδομένων</string>
+    <string name="main_btn_save">Αποθήκευση επιλογής</string>
+    <string name="main_show_stats">Προβολή στατιστικών</string>
 
     <!-- Preview -->
-    <string name="preview_id_lbl">Μοναδικό ID</string>
+    <string name="preview_id_lbl">Μοναδικό αναγνωριστικό</string>
     <string name="preview_device_lbl">Συσκευή</string>
     <string name="preview_version_lbl">Έκδοση</string>
     <string name="preview_done_btn">Τέλος</string>
@@ -31,6 +25,6 @@
     <!-- Notification -->
     <string name="notification_ticker">Συμφωνήσατε με την αποστολή στατιστικών</string>
     <string name="notification_title">Στατιστικά CyanogenMod</string>
-    <string name="notification_desc">Ενεργοποίηση ή Απενεργοποίηση Ανώνυμων Στατιστικών</string>
+    <string name="notification_desc">Ενεργοποίηση ή απενεργοποίηση στατιστικών του CyanogenMod</string>
     <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 </resources>
