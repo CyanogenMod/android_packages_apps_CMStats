@@ -22,7 +22,6 @@
   <string name="main_show_stats">Zobraziť štatistiku</string>
 
   <!-- Preview -->
-  <string name="preview_title">Náhľad na odosielané dáta</string>
   <string name="preview_id_lbl">Unikátne ID</string>
   <string name="preview_device_lbl">Zariadenie</string>
   <string name="preview_version_lbl">Verzia</string>
