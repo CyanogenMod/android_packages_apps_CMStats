@@ -20,6 +20,11 @@ import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.util.Log;
 
+import com.google.analytics.tracking.android.GoogleAnalytics;
+import com.google.analytics.tracking.android.Tracker;
+
+import com.cyanogenmod.stats.R;
+
 public class ReportingService extends Service {
     private static final String PREF_NAME = "CMStats";
     private static final String TAG = "CMStats";
@@ -95,6 +100,13 @@ public class ReportingService extends Service {
         Log.d(TAG, "SERVICE: Carrier=" + deviceCarrier);
         Log.d(TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
 
+        // report to google analytics
+        GoogleAnalytics ga = GoogleAnalytics.getInstance(this);
+        Tracker tracker = ga.getTracker(getString(R.string.ga_trackingId));
+        tracker.sendEvent(deviceName, deviceVersion, deviceCountry, null);
+        tracker.close();
+
+        // report to the cmstats service
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("http://stats.cyanogenmod.org/submit");
         try {
